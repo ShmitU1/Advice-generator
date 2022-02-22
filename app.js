@@ -1,7 +1,9 @@
+// Selectors
 const adviceNumber = document.querySelector('.advice-id')
 const adviceText = document.querySelector('.advice-text')
-const diceBtn = document.querySelector('.btn');
+const diceBtn = document.querySelector('.btn')
 
+// get data form api advice side and insert into paragraphs
 async function getData() {
     try {
         const response = await fetch('https://api.adviceslip.com/advice')
@@ -21,5 +23,6 @@ async function getData() {
     }
 }
 
+// call getdata function
 getData()
 
