@@ -71,14 +71,19 @@ body {
     transition: box-shadow 0.3s;
     position: absolute;
     transform: translate(-50%, -50%);
-    padding: 1.2rem;
+    padding: 1rem;
     border: none;
     border-radius: 100px;
     aspect-ratio: 1;
-    text-align: center;
-    font-size: 1.2em;
+    font-size: 1.1em;
     background: var(--NeonGreen);
     cursor: pointer;
+}
+
+.btn > i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn:hover {
@@ -87,7 +92,6 @@ body {
 
 .fa-solid {
     pointer-events: none;
-    display: flex;
 }
 
 @media screen and (min-width: 768px){
@@ -99,5 +103,8 @@ body {
 @media screen and (min-width: 1024px){
     .container {
         width: 40vw;
+    }
+    .btn {
+        padding: 1.2rem;
     }
 }

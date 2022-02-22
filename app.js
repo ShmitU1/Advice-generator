@@ -13,7 +13,7 @@ async function getData() {
         adviceText.innerText = `"${adviceValue}"`
 
         diceBtn.addEventListener('click', () => {
-             window.location.reload();
+            document.location.reload(true)
         })
     }
     catch(err) {
