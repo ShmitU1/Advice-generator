@@ -8,11 +8,11 @@ async function getData() {
     try {
         const response = await fetch('https://api.adviceslip.com/advice')
         const data = await response.json()
-    
-        const adviceId = data.slip.id
-        const adviceValue = data.slip.advice
-        adviceNumber.innerText = `Advice #${adviceId}`
-        adviceText.innerText = `"${adviceValue}"`
+
+        
+        const {slip: {id, advice}} = data;
+        adviceNumber.innerText = `Advice #${id}`
+        adviceText.innerText = `"${advice}"`
 
         diceBtn.addEventListener('click', () => {
             document.location.reload(true)
