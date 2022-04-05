@@ -11,7 +11,7 @@ async function getData() {
         const data = await response.json()
         generateAdvice(data);
     }
-    catch(err) {
+    catch (err) {
         console.log('Error: ' + err.message);
     }
 }
@@ -20,15 +20,15 @@ getData()
 
 // Generate advice content on the page
 function generateAdvice(data) {
-    const {slip: {id, advice}} = data;
+    const { slip: { id, advice } } = data;
     adviceNumber.innerText = `Advice #${id}`
     adviceText.innerText = `"${advice}"`
-    
+
     setTimeout(() => {
         diceBtn.classList.remove('disableBtn')
         diceBtn.addEventListener('click', () => {
             document.location.reload(true)
         })
-    }, 1000)
+    }, 1800)
 }
 
